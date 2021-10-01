@@ -17,21 +17,6 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJSON(github) }}
         run: echo "$GITHUB_CONTEXT"
-  deploy-staging:
-    name: Dump label info
-    runs-on: ubuntu-latest
-    environment: staging
-    steps:
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: echo "$GITHUB_CONTEXT"
-  deploy-prod:
-    name: Dump label info
-    runs-on: ubuntu-latest
-    environment: prod
-    steps:
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: echo "$GITHUB_CONTEXT"
+
+      - name: Dump GitHub contextasde
+        run: env
